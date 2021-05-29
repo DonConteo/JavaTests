@@ -1,0 +1,362 @@
+[
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Сколько байт содержит переменная int?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "1",
+            "isCorrect": false,
+            "answerDescription": "1 байт содержит переменная byte."
+            },
+            {
+            "answer": "2",
+            "isCorrect": false,
+            "answerDescription": "2 байта содержат переменные short И char."
+            },
+            {
+            "answer": "4",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            },
+            {
+            "answer": "8",
+            "isCorrect": false,
+            "answerDescription": "8 байт содержат переменные long и double."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Какие из представленных наборов переменных являются переменными с плавающей точкой?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "int, float, char, boolean",
+            "isCorrect": false,
+            "answerDescription": "из представленных переменных только float является переменной с плавающей точкой."
+            },
+            {
+            "answer": "byte, short, int, long",
+            "isCorrect": false,
+            "answerDescription": "Все это целочисленные переменные."
+            },
+            {
+            "answer": "char, String",
+            "isCorrect": false,
+            "answerDescription": "char - переменная для хранения символов, String - ссылочная переменная для хранения строк."
+            },
+            {
+            "answer": "float, double",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Что является результатом логического выражения?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "String",
+            "isCorrect": false,
+            "answerDescription": "String - ссылочная переменная для хранения строк и логическое значение может хранить только в виде последовательности символов."
+            },
+            {
+            "answer": "boolean",
+            "isCorrect": true,
+            "answerDescription": "Верно, результатом логического выражения является true/false, что и является значением boolean."
+            },
+            {
+            "answer": "целочисленное значение",
+            "isCorrect": false,
+            "answerDescription": "Нет. Вот просто нет. И даже объяснений не будет."
+            },
+            {
+            "answer": "удаление всех игр с твоего компьютера",
+            "isCorrect": false,
+            "answerDescription": "Только в том случае, если логическим выражением было \"или ты заканчиваешь четверть без троек, или я удаляю все игры с твоего компуктера\", произнесенное твоими родителями в конце четверти, а ты нахватал-таки троек."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Что будет выведено в консоль при выполнении данного кода?",
+            "code": "public class Question {   public static void main(String[] args) {       boolean a = true;       System.out.println(!a);       System.out.println(!false);       System.out.println(!(2 < 5));   }}"
+        },
+        "answers": [
+            {
+            "answer": "false\ntrue\nfalse",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            },
+            {
+            "answer": "true\nfalse\ntrue",
+            "isCorrect": false,
+            "answerDescription": "В случае (!a) логическое выражение меняет значение на противоположное. Во втором случае выражение не-false, как можно догадаться, будет равно... чему? В тертьем случае выражение (2 < 5) истинно, значит, его отрицание - ложно."
+            },
+            {
+            "answer": "Программа не скомпилируется",
+            "isCorrect": false,
+            "answerDescription": "Все прекрасно скомпилируется и отработает."
+            },
+            {
+            "answer": "falsetruefalse",
+            "isCorrect": false,
+            "answerDescription": "В программе используется команда System.out.println(), которая в конце строки осуществляет переход на новую строку."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Отметьте правильный порядок расположения логических операторов в порядке УМЕНЬШЕНИЯ приоритета слева-направо.",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "!, &, ^, |, &&, ||",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ"
+            },
+            {
+            "answer": "||, &&, |, ^, &, !",
+            "isCorrect": false,
+            "answerDescription": "У-МЕНЬ-ШЕ-НИ-Я."
+            },
+            {
+            "answer": "&&, ||, !, &, ^, |",
+            "isCorrect": false,
+            "answerDescription": "Унарные операторы имеют более высокий приоритет в сравнении с бинарными."
+            },
+            {
+            "answer": "!, ^, &&, &, |, ||",
+            "isCorrect": false,
+            "answerDescription": "В данном случае все перепутано, на своих местах стоят только отрицание (!) и условное ИЛИ (||)."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Что будет выведено в консоль при исполнении данного кода?",
+            "code": "public class Question {   public static void main(String[] args) {       boolean a = true;       boolean b = false;       boolean c = true;       System.out.println(false & (2 < 5));    }}"
+        },
+        "answers": [
+            {
+            "answer": "true",
+            "isCorrect": false,
+            "answerDescription": "Независимо от истинности выражения в скобках, при логическом умножении на ложь мы получаем ложь."
+            },
+            {
+            "answer": "Программа не скомпилируется",
+            "isCorrect": false,
+            "answerDescription": "Причин для этого нет."
+            },
+            {
+            "answer": "Программа выдаст ArithmeticExceprion",
+            "isCorrect": false,
+            "answerDescription": "Данная программа не содержит арифметических операций."
+            },
+            {
+            "answer": "false",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Что будет выведено в консоль при исполнении данного кода?",
+            "code": "public class Question{   public static void main(String[] args) {      double d = 100;      System.out.println(d/0);   }}"
+        },
+        "answers": [
+            {
+            "answer": "false",
+            "isCorrect": false,
+            "answerDescription": "В данном примере не производится логических операций, результатом которых могло бы стать логическое значение."
+            },
+            {
+            "answer": "Программа не скомпилируется",
+            "isCorrect": false,
+            "answerDescription": "Скомпилируется."
+            },
+            {
+            "answer": "ArithmeticExceprion",
+            "isCorrect": false,
+            "answerDescription": "ArithmeticException программа выдаст в случае, если мы будем делить на 0 целочисленное значение."
+            },
+            {
+            "answer": "Infinity",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ. При делении на 0 числа с плавающей точкой мы получаем именно его."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Какой из представленных вариантов инициализации пустого массива правильный?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "int[] array = new int[5];",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            },
+            {
+            "answer": "int[] array = new int[]{1,2,3,4,5};",
+            "isCorrect": false,
+            "answerDescription": "В данном случае массив не является пустым, а сразу содержит значения."
+            },
+            {
+            "answer": "int[] array = new int[];",
+            "isCorrect": false,
+            "answerDescription": "Во время инициализации массива нужно явно указать его размер."
+            },
+            {
+            "answer": "int[] array = int[];",
+            "isCorrect": false,
+            "answerDescription": "Пустые массивы инициализируются с помощью ключевого слова new и указания его размера."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Какой из представленных вариантов инициализации пустого массива правильный?",
+            "code": "public class Question {    public static void main(String[] args) {        User user = new User();        user.setUsername(\"Vasya\");    }    static class User {    String username;        User user = new User();        public void setUsername(String username) {            this.user.username = username;        }    }}"
+        },
+        "answers": [
+            {
+            "answer": "NullPointerException",
+            "isCorrect": false,
+            "answerDescription": "Нет, поскольку все поля инициализируются. Но из-за создания объекта User в самом классе User получится бесконечная глубина вложенности данных и в итоге вылетит StackOverflowError."
+            },
+            {
+            "answer": "Код не скомпилируется",
+            "isCorrect": false,
+            "answerDescription": "Код скомпилируется и запустится, но из-за создания объекта User в самом классе User получится бесконечная глубина вложенности данных и в итоге вылетит StackOverflowError."
+            },
+            {
+            "answer": "StackOverflowError",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            },
+            {
+            "answer": "Код отработает успешно",
+            "isCorrect": false,
+            "answerDescription": "Код, конечно, скомпилируется и даже запустится, но из-за создания объекта User в самом классе User получится бесконечная глубина вложенности данных и в итоге вылетит StackOverflowError."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Укажите 4 основных принципа ООП",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "Абстракция, инкапсуляция, преобразование, полиморфизм",
+            "isCorrect": false,
+            "answerDescription": "4 основных приципа ООП - абстракция, инкапсуляция, наследование, полиморфизм."
+            },
+            {
+            "answer": "Абстракция, инкапсуляция, наследование, полиморфизм",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            },
+            {
+            "answer": "Инкапсуляция, наследование, преобразование, разделение",
+            "isCorrect": false,
+            "answerDescription": "4 основных приципа ООП - абстракция, инкапсуляция, наследование, полиморфизм."
+            },
+            {
+            "answer": "Разделение, преобразование, абстракция, последовательность",
+            "isCorrect": false,
+            "answerDescription": "4 основных приципа ООП - абстракция, инкапсуляция, наследование, полиморфизм."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Выберите верное утверждение",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "Абстрактный класс должен содержать хотя бы один абстрактный метод",
+            "isCorrect": false,
+            "answerDescription": "Нет, абстрактный класс может не содержать ни одного абстрактного метода."
+            },
+            {
+            "answer": "Абстрактный метод может иметь тело",
+            "isCorrect": false,
+            "answerDescription": "Нет, абстрактный метод всегда является пустым."
+            },
+            {
+            "answer": "Абстрактный класс не может содержать методов с реализацией",
+            "isCorrect": false,
+            "answerDescription": "Абстрактный класс может содержать даже только одни лишь методы с реализацией."
+            },
+            {
+            "answer": "Если метод является абстрактным, каждый класс-наследник должен его реализовать или быть объявленным, как абстрактный",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java core",
+            "questionDescription": "Выберите модификатор с самым закрытым уровнем доступа из представленных",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "default(package-private)",
+            "isCorrect": false,
+            "answerDescription": "Предоставляет доступ из любого места в том же пакете."
+            },
+            {
+            "answer": "public",
+            "isCorrect": false,
+            "answerDescription": "Неправильно. Поля и методы, объявленные с модификатором public, видны другим классам из текущего пакета и из внешних пакетов."
+            },
+            {
+            "answer": "private",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ. Модификатор private ограничивает видимость данных и методов пределами одного класса."
+            },
+            {
+            "answer": "protected",
+            "isCorrect": false,
+            "answerDescription": "Предоставляет доступ из любого места в том же пакете, а также для классов-наследников, даже если они лежат в другом пакете."
+            }
+        ]
+    }
+]

@@ -24,4 +24,8 @@ public class AnswerService {
     public void deleteAnswersForQuestion(long id) {
         answerRepository.deleteAnswersForQuestion(id);
     }
+
+    public void deleteAll() {
+        answerRepository.deleteAll();
+    }
 }

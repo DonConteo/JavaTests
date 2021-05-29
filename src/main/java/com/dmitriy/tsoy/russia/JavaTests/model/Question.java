@@ -10,7 +10,9 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String theme;
+    @Column(columnDefinition = "text")
     private String questionDescription;
+    @Column(columnDefinition = "text")
     private String code;
 
     public long getId() {

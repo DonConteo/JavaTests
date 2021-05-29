@@ -19,8 +19,8 @@ public class QuestionService {
     @Autowired
     AnswerService answerService;
 
-    public Optional<Question> getQuestionById(long id) {
-        return questionRepository.findById(id);
+    public Question getQuestionById(long id) {
+        return questionRepository.getById(id);
     }
 
     public List<QuestionDto> getAllQuestionDto() {
@@ -28,32 +28,44 @@ public class QuestionService {
         List<Question> questions = questionRepository.findAll();
         for(Question q : questions) {
             List<Answer> answers = answerService.getAnswersForQuestion(q.getId());
-            questionDtoList.add(new QuestionDto(Optional.of(q), answers));
+            questionDtoList.add(new QuestionDto(q, answers));
         }
         return questionDtoList;
     }
 
     public QuestionDto getFullQuestion(long id) {
-        Optional<Question> question = questionRepository.findById(id);
+        Question question = questionRepository.getById(id);
         List<Answer> answers = answerService.getAnswersForQuestion(id);
         QuestionDto questionDto = new QuestionDto(question, answers);
         return questionDto;
     }
 
-    public void saveQuestion(QuestionDto questionDto) {
-        Question question = new Question(questionDto.getQuestion().get().getTheme(),
-                                            questionDto.getQuestion().get().getQuestionDescription(),
-                                            questionDto.getQuestion().get().getCode());
-        questionRepository.save(question);
-        List<Answer> answers = questionDto.getAnswers();
-        for(Answer a : answers) {
-            a.setQuestion(questionRepository.getById(question.getId()));
-            answerService.saveAnswer(a);
+    public void saveQuestion(List<QuestionDto> questionDto) {
+        for(QuestionDto qd : questionDto){
+            Question question = new Question(qd.getQuestion().getTheme(),
+                                                qd.getQuestion().getQuestionDescription(),
+                                                qd.getQuestion().getCode());
+            questionRepository.save(question);
+            List<Answer> answers = qd.getAnswers();
+            for(Answer a : answers) {
+                a.setQuestion(questionRepository.getById(question.getId()));
+                answerService.saveAnswer(a);
+            }
         }
     }
 
     public void deleteQuestion(long id) {
         answerService.deleteAnswersForQuestion(id);
         questionRepository.deleteById(id);
+    }
+
+    public void deleteAllQuestions() {
+        answerService.deleteAll();
+        questionRepository.deleteAll();
+    }
+
+    public List<Question> getRandomQuestions(String theme) {
+        List<Question> list = questionRepository.getRandomQuestions(theme);
+        return list;
     }
 }

@@ -22,7 +22,7 @@ public class QuestionController {
     }
 
     @PostMapping()
-    public ResponseEntity<String> saveQuestion(@RequestBody QuestionDto questionDto) {
+    public ResponseEntity<String> saveQuestion(@RequestBody List<QuestionDto> questionDto) {
         questionService.saveQuestion(questionDto);
         return new ResponseEntity<>("Тебе вопросов мало?", HttpStatus.OK);
     }
@@ -31,5 +31,11 @@ public class QuestionController {
     public ResponseEntity<String> deleteQuestion(@PathVariable(value="id") long id) {
         questionService.deleteQuestion(id);
         return new ResponseEntity<>("Правильно, к черту этот вопрос!", HttpStatus.OK);
+    }
+
+    @DeleteMapping()
+    public ResponseEntity<String> deleteAllQuestions() {
+        questionService.deleteAllQuestions();
+        return new ResponseEntity<>("К черту все это!!!", HttpStatus.OK);
     }
 }

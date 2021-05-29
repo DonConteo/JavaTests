@@ -15,10 +15,10 @@ public interface AnswerRepository extends JpaRepository<Answer, Long> {
 
     @Transactional
     @Query(value="SELECT * FROM answer WHERE question_id = :id", nativeQuery = true)
-    List<Answer> getAnswersForQuestion(@Param("id")long id);
+    List<Answer> getAnswersForQuestion(@Param("id") long id);
 
     @Transactional
     @Modifying
     @Query(value="DELETE FROM answer WHERE question_id = :id", nativeQuery = true)
-    void deleteAnswersForQuestion(@Param("id")long id);
+    void deleteAnswersForQuestion(@Param("id") long id);
 }

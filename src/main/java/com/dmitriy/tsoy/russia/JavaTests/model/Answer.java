@@ -1,5 +1,7 @@
 package com.dmitriy.tsoy.russia.JavaTests.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,10 +11,13 @@ public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(columnDefinition = "text")
     private String answer;
+    @JsonProperty
     private boolean isCorrect;
+    @Column(columnDefinition = "text")
     private String answerDescription;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id")
     private Question question;
 
