@@ -2,7 +2,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Сколько байт содержит переменная int?",
             "code": ""
         },
@@ -32,7 +32,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Какие из представленных наборов переменных являются переменными с плавающей точкой?",
             "code": ""
         },
@@ -62,7 +62,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Что является результатом логического выражения?",
             "code": ""
         },
@@ -92,9 +92,9 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Что будет выведено в консоль при выполнении данного кода?",
-            "code": "public class Question {   public static void main(String[] args) {       boolean a = true;       System.out.println(!a);       System.out.println(!false);       System.out.println(!(2 < 5));   }}"
+            "code": "public class Question {\n   public static void main(String[] args) {\n       boolean a = true;\n       System.out.println(!a);\n       System.out.println(!false);\n       System.out.println(!(2 < 5));\n   }\n}"
         },
         "answers": [
             {
@@ -122,7 +122,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Отметьте правильный порядок расположения логических операторов в порядке УМЕНЬШЕНИЯ приоритета слева-направо.",
             "code": ""
         },
@@ -152,9 +152,9 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Что будет выведено в консоль при исполнении данного кода?",
-            "code": "public class Question {   public static void main(String[] args) {       boolean a = true;       boolean b = false;       boolean c = true;       System.out.println(false & (2 < 5));    }}"
+            "code": "public class Question {\n   public static void main(String[] args) {\n       boolean a = true;\n       boolean b = false;\n       boolean c = true;\n       System.out.println(false & (2 < 5));\n    }\n}"
         },
         "answers": [
             {
@@ -182,9 +182,9 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Что будет выведено в консоль при исполнении данного кода?",
-            "code": "public class Question{   public static void main(String[] args) {      double d = 100;      System.out.println(d/0);   }}"
+            "code": "public class Question {\n   public static void main(String[] args) {\n      double d = 100;\n      System.out.println(d/0);\n   }\n}"
         },
         "answers": [
             {
@@ -212,7 +212,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Какой из представленных вариантов инициализации пустого массива правильный?",
             "code": ""
         },
@@ -242,9 +242,9 @@
     {
         "question": 
         {
-            "theme": "java core",
-            "questionDescription": "Какой из представленных вариантов инициализации пустого массива правильный?",
-            "code": "public class Question {    public static void main(String[] args) {        User user = new User();        user.setUsername(\"Vasya\");    }    static class User {    String username;        User user = new User();        public void setUsername(String username) {            this.user.username = username;        }    }}"
+            "theme": "java_core",
+            "questionDescription": "Что получится в результате запуска этой программы?",
+            "code": "public class Question {\n    public static void main(String[] args) {\n        User user = new User();\n        user.setUsername(\"Vasya\");\n    }\n    static class User {\n    String username;\n\n        User user = new User();\n\n        public void setUsername(String username) {\n            this.user.username = username;\n        }\n    }\n}"
         },
         "answers": [
             {
@@ -272,7 +272,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Укажите 4 основных принципа ООП",
             "code": ""
         },
@@ -302,7 +302,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Выберите верное утверждение",
             "code": ""
         },
@@ -332,7 +332,7 @@
     {
         "question": 
         {
-            "theme": "java core",
+            "theme": "java_core",
             "questionDescription": "Выберите модификатор с самым закрытым уровнем доступа из представленных",
             "code": ""
         },
@@ -356,6 +356,186 @@
             "answer": "protected",
             "isCorrect": false,
             "answerDescription": "Предоставляет доступ из любого места в том же пакете, а также для классов-наследников, даже если они лежат в другом пакете."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java_core",
+            "questionDescription": "Что такое ООП?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "Методология программирования, основанная на представлении программы в виде совокупности объектов, каждый из которых является экземпляром определенного класса, а классы образуют иерархию наследования.",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ"
+            },
+            {
+            "answer": "Любой тип программирования, в котором используются понятия высокого уровня и в котором не работают напрямую с ячейками памяти ПК.",
+            "isCorrect": false,
+            "answerDescription": "Неправильно. Это описание подойдет под любой язык высокого уровня"
+            },
+            {
+            "answer": "Просто красивое понятие, не несущее дополнительной смысловой нагрузки. Просто программисты любят аббревиатуры, так области их знаний выглядят сложнее.",
+            "isCorrect": false,
+            "answerDescription": "Неправильно. Хотя бы потому, что программисты не любят бессмысленное усложнение"
+            },
+            {
+            "answer": "Очень Одинокий Программист",
+            "isCorrect": false,
+            "answerDescription": "..."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java_core",
+            "questionDescription": "Какие из представленных классов НЕ наследуются от класса Object",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "Классы с модификатором private.",
+            "isCorrect": false,
+            "answerDescription": "Все классы в Java унаследованы от класса Object."
+            },
+            {
+            "answer": "Вложенные классы.",
+            "isCorrect": false,
+            "answerDescription": "Все классы в Java унаследованы от класса Object."
+            },
+            {
+            "answer": "Классы, унаследованные от других классов.",
+            "isCorrect": false,
+            "answerDescription": "Все классы в Java унаследованы от класса Object."
+            },
+            {
+            "answer": "Ни один из перечисленных.",
+            "isCorrect": true,
+            "answerDescription": "Все классы в Java унаследованы от класса Object."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java_core",
+            "questionDescription": "Как объявить класс в коде?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "class MyClass {}",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ."
+            },
+            {
+            "answer": "new class MyClass {}",
+            "isCorrect": false,
+            "answerDescription": "Ключевое слово new при объявлении класса не требуется."
+            },
+            {
+            "answer": "select * from class MyClass {}",
+            "isCorrect": false,
+            "answerDescription": "Первая часть объявления является SQL-синтаксисом и к объявлению класса отношения не имеет."
+            },
+            {
+            "answer": "MyClass extends class {}",
+            "isCorrect": false,
+            "answerDescription": "Отсутствует само объявление класса в начале."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java_core",
+            "questionDescription": "Что означает java.lang.ArrayIndexOutOfBoundsException?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "Переполнение памяти.",
+            "isCorrect": false,
+            "answerDescription": "О переполнении памяти говорит ошибка OutOfMemoryError"
+            },
+            {
+            "answer": "Выход за рамки границ массива",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ"
+            },
+            {
+            "answer": "Попытка вставить в массив некорректное значение.",
+            "isCorrect": false,
+            "answerDescription": "О данной ошибке говорит ArrayStoreException"
+            },
+            {
+            "answer": "Такой ошибки не существует.",
+            "isCorrect": false,
+            "answerDescription": "Еще как существует"
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java_core",
+            "questionDescription": "Что означает перегрузка метода в java (overload)?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "Изменение поведения метода класса относительно родительского.",
+            "isCorrect": false,
+            "answerDescription": "Это называется переопределение (override) метода"
+            },
+            {
+            "answer": "Изменение поведения метода класса относительно дочернего.",
+            "isCorrect": false,
+            "answerDescription": "Это неправильный ответ. Во-первых, в этом действии нет смысла, поскольку теряется иерархия наследования. Во-вторых, это высказывание ближе к override, а не к overload"
+            },
+            {
+            "answer": "Несколько методов с одинаковым названием, но разным набором параметров.",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ"
+            },
+            {
+            "answer": "Несколько разных классов с одинаковым методом.",
+            "isCorrect": false,
+            "answerDescription": "Это неправильный ответ."
+            }
+        ]
+    },
+    {
+        "question": 
+        {
+            "theme": "java_core",
+            "questionDescription": "Как вызвать обычный метод класса внутри static-метода?",
+            "code": ""
+        },
+        "answers": [
+            {
+            "answer": "Никак, static-метод не работает с объектом класса.",
+            "isCorrect": true,
+            "answerDescription": "Это правильный ответ. Методы static принадлежат самому классу, а не объекту класса и могут обращаться только к статическим переменным или методам"
+            },
+            {
+            "answer": "Надо перед этим перегрузить обычный метод класса.",
+            "isCorrect": false,
+            "answerDescription": "Это неправильный ответ. Методы static принадлежат самому классу, а не объекту класса и могут обращаться только к статическим переменным или методам"
+            },
+            {
+            "answer": "Надо перед этим переопределить обычный метод класса.",
+            "isCorrect": false,
+            "answerDescription": "Это неправильный ответ. Методы static принадлежат самому классу, а не объекту класса и могут обращаться только к статическим переменным или методам"
+            },
+            {
+            "answer": "Так же, как и обычный метод, ничего дополнительно делать не надо.",
+            "isCorrect": false,
+            "answerDescription": "Это неправильный ответ. Методы static принадлежат самому классу, а не объекту класса и могут обращаться только к статическим переменным или методам"
             }
         ]
     }

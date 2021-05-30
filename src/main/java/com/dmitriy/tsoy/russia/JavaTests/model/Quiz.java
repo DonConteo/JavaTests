@@ -3,7 +3,6 @@ package com.dmitriy.tsoy.russia.JavaTests.model;
 import com.dmitriy.tsoy.russia.JavaTests.dto.QuestionDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class Quiz {

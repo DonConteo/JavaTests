@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <a>Приветствую!!!!!!!</a>
+</div>
+<div th:each="elem : ${list}">
+    <a th:text="${elem.question.questionDescription}"></a>
+    <a th:text="${elem.answers}"></a>
+</div>
+
+</body>
+</html>

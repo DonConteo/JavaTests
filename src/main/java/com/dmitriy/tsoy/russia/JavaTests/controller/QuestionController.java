@@ -3,13 +3,16 @@ package com.dmitriy.tsoy.russia.JavaTests.controller;
 import com.dmitriy.tsoy.russia.JavaTests.dto.QuestionDto;
 import com.dmitriy.tsoy.russia.JavaTests.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("question")
 public class QuestionController {
 
@@ -17,8 +20,10 @@ public class QuestionController {
     QuestionService questionService;
 
     @GetMapping()
-    public ResponseEntity<List<QuestionDto>> getAllQuestionsDto() {
-        return new ResponseEntity<>(questionService.getAllQuestionDto(), HttpStatus.OK);
+    public String getAllQuestionsDto(Model model) {
+        List<QuestionDto> list = questionService.getAllQuestionDto();
+        model.addAttribute("list", list);
+        return "question";
     }
 
     @PostMapping()
