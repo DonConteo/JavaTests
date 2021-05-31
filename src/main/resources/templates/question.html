@@ -9,7 +9,7 @@
     <a>Приветствую!!!!!!!</a>
 </div>
 <div th:each="elem : ${list}">
-    <a th:text="${elem.question.questionDescription}"></a>
+    <p th:text="${elem.question.questionDescription}"></p>
     <a th:text="${elem.answers}"></a>
 </div>
 
